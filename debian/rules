@@ -1,4 +1,24 @@
 #!/usr/bin/make -f
 
+export DEB_BUILD_MAINT_OPTIONS=hardening=+bindnow
+
 %:
 	dh $@
+
+export systemdsystemunitdir:=$(shell pkg-config systemd --variable=systemdsystemunitdir)
+export modulesdir=/usr/lib/modules-load.d
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-doc			\
+	 --libexecdir='$$(libdir)'				\
+	 --with-systemdsystemunitdir=$(systemdsystemunitdir)
+
+override_dh_auto_install:
+	dh_auto_install -- modulesdir=$(modulesdir) dbusconfdir=/usr/share/dbus-1/system.d
+
+override_dh_auto_test:
+
+execute_after_dh_install:
+	@echo 'Strip wrong #include "config.h" from ddcci.h (bug#518083)'
+	sed --in-place 's:[#]include "config.h"::' \
+	 debian/libddccontrol-dev/usr/include/ddccontrol/ddcci.h

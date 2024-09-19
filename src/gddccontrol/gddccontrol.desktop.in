@@ -1,0 +1,9 @@
+[Desktop Entry]
+_Name=DDC Control
+_GenericName=Monitor Settings
+_Comment=Set your monitor preferences (contrast, brightness,...) and manage your profiles
+Exec=gddccontrol
+Icon=gddccontrol
+Terminal=false
+Type=Application
+Categories=GTK;Settings;HardwareSettings;

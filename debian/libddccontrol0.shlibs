@@ -1,0 +1,2 @@
+libddccontrol 0 libddccontrol0 (>= 0.5.2-1)
+libddccontrol_dbus_client 0 libddccontrol0 (>= 0.5.2-1)
