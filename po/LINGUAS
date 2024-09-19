@@ -1,0 +1,9 @@
+# Set of available languages.
+# refresh by running: ls *.po | sed 's/[.]po$//'
+cs
+de
+es
+fr
+pl
+ru
+zh_CN

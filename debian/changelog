@@ -1,5 +1,381 @@
-template-repository (1.0-1) unstable; urgency=medium
+ddccontrol (1.0.3-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream relaese
+  * Remove upstreamed quilt patch
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 31 Jan 2024 22:29:07 +0000
+
+ddccontrol (1.0.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 31 Jan 2024 08:54:49 +0000
+
+ddccontrol (1.0.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Quilt patch to update configure.ac version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 29 Jan 2024 10:54:24 +0000
+
+ddccontrol (1.0.0-3) unstable; urgency=medium
+
+  * Remove obsolete conffile properly (closes: #1054890)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 14 Jan 2024 20:49:47 +0000
+
+ddccontrol (1.0.0-2) unstable; urgency=medium
+
+  * Remove obsolete conffile (closes: #1054890)
+  * Switch build dependency to systemd-dev (closes: #1060515)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 12 Jan 2024 11:18:54 +0000
+
+ddccontrol (1.0.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Adjust dbus support file installation location
+  * Update debian/copyright per lintian
+  * Swizzle dpkg-maintscript in libddccontrol0.{pre/post}{inst,rm}
+    to libddccontrol0.maintscript per lintian
+  * Remove unused substitution variable from control file
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 18 Oct 2023 08:41:39 +0100
+
+ddccontrol (0.6.3-2) unstable; urgency=medium
+
+  * Add loong64 to architectures list (closes: #1050068)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 06 Sep 2023 16:42:04 +0100
+
+ddccontrol (0.6.3-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 06 Sep 2023 16:32:32 +0100
+
+ddccontrol (0.6.2-3) unstable; urgency=medium
+
+  * Oops, finish adding arch loong64 (actually closes: #1050068)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 21 Aug 2023 08:10:16 +0100
+
+ddccontrol (0.6.2-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable):
+    + ddccontrol: Drop versioned constraint on ddccontrol-db (>= 20060308) in
+      Depends.
+
+  [ Barak A. Pearlmutter ]
+  * Add loong64 to supported binary architectures (closes: #1050068)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sat, 19 Aug 2023 17:51:01 +0100
+
+ddccontrol (0.6.2-1) unstable; urgency=medium
+
+  * New upstream version
+  * Set upstream metadata fields: Archive, Name, Repository, Repository-Browse.
+  * Update standards version to 4.6.2, no changes needed.
+  * Set field Upstream-Name in debian/copyright.
+  * Remove obsolete field Name from debian/upstream/metadata (already present in
+    machine-readable debian/copyright).
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 21 Jul 2023 17:46:14 +0200
+
+ddccontrol (0.6.1-1) unstable; urgency=medium
+
+  * Swizzle debian/watch to tags in upstream repo
+  * New upstream release
+  * Update standards version to 4.6.1, no changes needed.
+  * Modernize debian/copyright
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 19 Dec 2022 20:49:59 +0000
+
+ddccontrol (0.6.0-8) unstable; urgency=medium
+
+  * Use dpkg-maintscript-helper(1) for old conffile (closes: #1004227)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 23 Jan 2022 11:33:43 +0000
+
+ddccontrol (0.6.0-7) unstable; urgency=medium
+
+  * oops, need to actually swizzle module dir in packaging scripts
+  * tweak debian/watch
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 17 Jan 2022 21:28:29 +0000
+
+ddccontrol (0.6.0-6) unstable; urgency=medium
+
+  * track upstream changes (which fixes module dir)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 17 Jan 2022 12:21:00 +0000
+
+ddccontrol (0.6.0-5) unstable; urgency=medium
+
+  * migrate cleaning out of debian/rules
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 18 Oct 2021 09:35:48 +0100
+
+ddccontrol (0.6.0-4) unstable; urgency=medium
+
+  * build require systemd for systemd.pc for pkg-config
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 07 Oct 2021 13:55:38 +0100
+
+ddccontrol (0.6.0-3) unstable; urgency=medium
+
+  * gddccontrol enhances ddccontrol
+  * systemdsystemunitdir from "pkg-config systemd --variable=systemdsystemunitdir"
+    That is /lib/systemd/system now, but will move below /usr/ (closes: #995802)
+  * yak shave debian/rules for dh 13+
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 07 Oct 2021 13:40:00 +0100
+
+ddccontrol (0.6.0-2) unstable; urgency=medium
+
+  * Track upstream mods
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 05 Oct 2021 21:35:16 +0100
+
+ddccontrol (0.6.0-1) unstable; urgency=medium
+
+  * New upstream release
+    - Patches merged upstream
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 05 Oct 2021 13:21:30 +0100
+
+ddccontrol (0.5.3-1) unstable; urgency=medium
+
+  * autoupdate patch
+  * l10n patch, German (closes: #586775)
+  * Forward port patches, which have been largely upstreamed
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 01 Oct 2021 09:57:31 +0100
+
+ddccontrol (0.5.2-2) unstable; urgency=medium
+
+  * The new upstream release (closes: #988113) fixes a bunch of issues
+    - Can run GUI client gddccontrol as regular user, since the system now
+      uses dbus (closes: #931145)
+    - autotools fixes (closes: #995038)
+    - 𝐬𝐭𝐚𝐭𝐢𝐜 inline int readbytes (closes: #757268)
+  * Patch autoconf: xml2-config to pkg-config (closes: #949090)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 30 Sep 2021 15:57:53 +0100
+
+ddccontrol (0.5.2-1) unstable; urgency=medium
+
+  * Include .pc file in -dev package
+  * Trim trailing whitespace.
+  * Update watch file format version to 4.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Drop unnecessary dependency on dh-autoreconf.
+  * Update standards version to 4.6.0, no changes needed.
+  * Bump to debhelper 13.
+  * Take over maintenance of package (closes: #980404)
+    - thanks to Miroslav Kravec for doing a great job with it for so long
+  * Rules-Requires-Root: no
+  * Forward port patches
+  * Adjust to move from /usr/lib/*/ddccontrol/ to /usr/libexec/ddccontrol/
+  * Install html from installation directory
+  * Install systemd-related service files and such
+  * Patch to link libdbusinterface into libddccontrol_dbus_client
+  * Add attribution line to debian/README.Debian
+  * Swizzle packaging repo to salsa
+  * Remove unnecessary debian/rules linker flags
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 30 Sep 2021 13:48:25 +0100
+
+ddccontrol (0.4.4-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix FTBFS with glibc 2.30+ due to sys/io.h removal on armel/armhf.
+    (Closes: #979283)
+
+ -- Adrian Bunk <bunk@debian.org>  Fri, 05 Feb 2021 17:11:39 +0200
+
+ddccontrol (0.4.4-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add upstream patch to fix FTBFS with GCC 10 (Closes: #957127)
+
+ -- Paul Wise <pabs@debian.org>  Thu, 31 Dec 2020 12:51:18 +0800
+
+ddccontrol (0.4.4-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #888015)
+  * debian/ddccontrol.install, debian/libddccontrol0.install:
+    update location of ddcpci binary (fixes binary-without-manpage),
+    install with library (ddcpci is used by the library)
+  * debian/gddccontrol.lintian-overrides: add override for
+    desktop-command-not-in-package
+  * debian/changelog, debian/control: fix file-contains-trailing-whitespace
+  * debian/control: bump standards version to 4.1.4
+  * debian/rules: enable bindnow hardening, fixes lintian hardening-no-bindnow
+
+ -- Miroslav Kravec <kravec.miroslav@gmail.com>  Thu, 26 Apr 2018 20:16:18 +0200
+
+ddccontrol (0.4.3-2) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * Restore changes from 0.4.2-12:
+    - Drop Ubuntu-specific gksu dependency and patch (Closes: #894175)
+    - Drop obsolete dirs files
+
+  [ Miroslav Kravec ]
+  * Add dependency to policykit to gddccontrol
+  * Add patch to use policykit to launch gddccontrol via desktop
+  * Add patch to load i2c-dev module at boot
+  * debian/libddccontrol0.shlibs: bump version
+
+ -- Miroslav Kravec <kravec.miroslav@gmail.com>  Tue, 24 Apr 2018 18:56:45 +0200
+
+ddccontrol (0.4.3-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/compat: increased compatibility level to 11
+  * debian/control:
+    * updated homepage to GitHub
+    * updated VCS urls to GitHub
+    * increased debhelper dependency version to 11
+    * added build dependencies to build the release
+    * adopt the package (Closes: #483479)
+  * debian/ddccontrol.docs: use README.md
+  * debian/ddccontrol.lintian-overrides, debian/lintian-overrides: removed,
+    because it should be fixed, not suppressed warning
+  * debian/gddccontrol.dirs: install icons folder
+  * debian/gddccontrol.install: install icons (moved from pixmaps)
+  * debian/gddccontrol.menu: removed, because there is .desktop file
+  * debian/libddccontrol0.postinst: removed, because ldconfig is called by
+    trigger added by dh_makeshlibs
+  * debian/libddccontrol0.postrm: removed, because ldconfig is called by
+    trigger added by dh_makeshlibs
+  * debian/rules: use autogen.sh, and enable-doc at configure
+
+ -- Miroslav Kravec <kravec.miroslav@gmail.com>  Fri, 26 Jan 2018 10:54:34 +0100
+
+ddccontrol (0.4.2-12) unstable; urgency=medium
+
+  * QA upload.
+  * Drop Ubuntu-specific gksu dependency and patch. gksu will be removed
+    from Debian and Ubuntu soon.
+  * Bump debhelper compat to 10
+  * Drop obsolete menu files since a .desktop is provided
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 30 Dec 2017 12:27:20 -0500
+
+ddccontrol (0.4.2-11) unstable; urgency=low
+
+  * QA upload.
+  * Link to libm. (Closes: #713540).
+  * Add patch to prevent buffer overrun. (Closes: #639932).
+  * Bump debhelper build-dep and compat to 9.
+    + Adds hardening flags.
+    + Patch for errors found by hardening flags.
+    + Make package multi-arch compliant.
+  * Bump Standards Version to 3.9.4.
+
+ -- Barry deFreese <bdefreese@debian.org>  Mon, 01 Jul 2013 16:58:49 -0400
+
+ddccontrol (0.4.2-10) unstable; urgency=low
+
+  * QA upload.
+  * Stop building the panel applet. Closes: #645565
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 17 Oct 2011 06:12:32 +0200
+
+ddccontrol (0.4.2-9) unstable; urgency=low
+
+  * QA upload.
+  * Switch to 3.0 (quilt) format.
+  * Reduce delta with Ubuntu to zero:
+    - Apply 0001-ubuntu_desktop_file_use_gksu.patch on Ubuntu:
+      + Use gksu in gddccontrol.desktop to get access to the DDC/CI device.
+    - Tune dh_gencontrol call to add gksu to gddccontrol's Depends field
+      when built on Ubuntu.
+  * Remove libddccontrol0.post{inst,rm} as debhelper does the job.
+  * debian/rules:
+    - Switch to DH7 pure-form format.
+    - Link with --as-needed.
+    - Strip wrong #include statement from /usr/include/ddccontrol/ddcci.h
+      Closes: #518083
+  * Bump Standards, required changes:
+    - Bump debian/compat to 7.
+    - debian/control:
+      + Add misc:Depends macros to the Depends fields.
+      + Fix description-synopsis-starts-with-article warning.
+      + Small improvements to the packages description.
+    - debian/rules: Remove dh_desktop call, it is deprecated.
+    - debian/watch: Remove dh-make template
+    - debian/copyright: Fix copyright-refers-to-symlink-license warning.
+
+ -- Alessio Treglia <alessio@debian.org>  Fri, 01 Jul 2011 14:39:06 +0200
+
+ddccontrol (0.4.2-8) unstable; urgency=low
+
+  * QA upload.
+  * Get rid of unneeded *.la files (Closes: #621216).
+
+ -- Alessio Treglia <alessio@debian.org>  Fri, 03 Jun 2011 10:59:33 +0200
+
+ddccontrol (0.4.2-7) unstable; urgency=low
+
+  * QA upload.
+    - Add armhf to architectures list. (Closes: DebianBug#604653)
+    - Bump standards version to 3.9.1
+
+ -- Hector Oron <zumbi@debian.org>  Mon, 28 Mar 2011 17:21:18 +0000
+
+ddccontrol (0.4.2-6) unstable; urgency=low
+
+  * Orphaning this package. Maintainer set to Debian QA Group.
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Thu, 10 Sep 2009 20:47:21 -0400
+
+ddccontrol (0.4.2-5) unstable; urgency=low
+
+  * Change to build with libpci-dev, fixes FTBFS (Closes: #478369)
+  * Use updated doc-base section.
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Tue, 29 Apr 2008 02:02:56 -0400
+
+ddccontrol (0.4.2-4) unstable; urgency=low
+
+  * debian/watch: Switch to Debian QA's SourceForge redirector.
+  * debian/control: Add Vcs-Browser and Vcs-Svn fields.
+  * debian/ddccontrol.doc-base: add file
+  * debian/rules: placate lintian by properly calling '$(MAKE) distclean'
+  * debian/control: Update to modern substvars (e.g., ${source:Version})
+  * debian/gddccontrol.menu: Update to comply with new menu policy
+  * debian/control: Add armel to arch list (Closes: #461089)
+  * debian/control: Update to Standards-Version 3.7.3 (no changes)
+  * debian/ddccontrol.menu: Don't use obsolete Apps section
+  * debian/control: Make gddccontrol bin-nmuable
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Wed, 16 Jan 2008 22:44:36 -0500
+
+ddccontrol (0.4.2-3) unstable; urgency=low
+
+  * Updated to debhelper compatibility level 5.
+  * Update architecture list (Closes: #423796).
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Sat, 26 May 2007 12:55:35 -0400
+
+ddccontrol (0.4.2-2) unstable; urgency=low
+
+  * Updated maintainer email address
+  * Restrict architectures to i386 and amd64 (Closes: #385812)
+  * Document why "I/O warning" sometimes occurs (Closes: #386235)
+  * debian/rules: make debhelper commands apply to all binary packages
+  * Force LDFLAGS="-lz" for ./configure (Closes: #396732)
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Mon, 23 Apr 2007 16:21:02 -0400
+
+ddccontrol (0.4.2-1) unstable; urgency=low
+
+  * Initial Release.
+  * Resolve ITP (closes: #322774)
+
+ -- Roberto C. Sanchez <roberto@familiasanchez.net>  Sun, 30 Jul 2006 21:55:49 -0400
